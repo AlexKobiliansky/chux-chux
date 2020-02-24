@@ -47,6 +47,96 @@
 			</div>
 		</header>
 		<!-- HEADER END -->
+
+		<!-- SECTION SEARCHTABS START -->
+		<section class="s-searchtabs">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-11">
+						<div class="search-tabs">
+							<ul class="tabs-controls">
+								<li><a href="#searchtab-1">По маршруту</a></li>
+								<li><a href="#searchtab-2">По станции</a></li>
+								<li><a href="#searchtab-3">По номеру</a></li>
+							</ul>
+							<div class="tabs-contents-wrap">
+								<div class="tab-content" id="searchtab-1">
+									<form class="form-search form-search-route">
+										<div class="form-radio-wrap" id="ways-number">
+											<label class="checked"><input id="one-way" type="radio" name="numWays" value="oneway" checked> В один конец</label>
+											<label><input id="two-ways" type="radio" name="numWays" value="roundtrip"> Туда и обратно<br></label>
+										</div>
+
+										<div class="form-labels-wrap">
+
+											<!-- change-routes -->
+											<div class="change-routes"><img src="img/icons/change-arrows.png" alt="alt"></div>
+											<!-- /change-routes -->
+
+											<label class="input-station-label">
+												<input type="text" placeholder="Станция отправления" name="Станция отправления" data-validation="required" class="departure">
+											</label>
+
+											<label class="input-station-label">
+												<input type="text" placeholder="Станция прибытия" name="Станция прибытия" data-validation="required" class="arrival">
+											</label>
+
+											<label class="has-date-picker">
+												<input type="text" placeholder="Выбрать дату" name="Станция прибытия" data-validation="required" class="date-picker">
+											</label>
+										</div>
+
+										<div class="form-labels-wrap return-trip">
+
+											<!-- change-routes -->
+											<div class="change-routes"><img src="img/icons/change-arrows.png" alt="alt"></div>
+											<!-- /change-routes -->
+
+											<label class="input-station-label">
+												<input type="text" placeholder="Станция отправления" name="Станция отправления" data-validation="required">
+											</label>
+
+											<label class="input-station-label">
+												<input type="text" placeholder="Станция прибытия" name="Станция прибытия" data-validation="required">
+											</label>
+
+											<label class="has-date-picker">
+												<input type="text" placeholder="Выбрать дату" name="Станция прибытия" data-validation="required" class="date-picker">
+											</label>
+										</div>
+
+										<div class="form-bottom">
+											<label>
+												<select name="Тип поезда" class="form-select">
+													<option value="Поезд">Поезд</option>
+													<option value="Электричка">Электричка</option>
+													<option value="Фирменный поезд">Фирменный поезд</option>
+												</select>
+											</label>
+
+											<label class="select-label">
+												<input type="checkbox" name="Без пересадок" checked>Без пересадок
+											</label>
+
+											<div class="btn-wrap">
+												<button type="submit" class="btn btn-red"><img src="img/icons/search-icon.svg" alt="alt" class="svg">Найти</button>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="tab-content" id="searchtab-2">
+									2
+								</div>
+								<div class="tab-content" id="searchtab-3">
+									3
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- SECTION SEARCHTABS END -->
 	</div>
 </div>
 

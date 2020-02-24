@@ -23,7 +23,7 @@ body
   line-height: 1.4
   font-family: $default-font
   overflow-x: hidden
-  color: $text
+  color: #fff
   input, textarea
     border: #666 1px solid
     outline: none
@@ -68,3 +68,23 @@ ul
 #page-container-wrap
   background-image: url('../img/bg.jpg')
   +bg-cover
+
+.btn
+  display: inline-block
+  white-space: nowrap
+  line-height: 1
+  font-size: 14px
+  +mt(.3s)
+  padding: 14px
+  border-radius: 20px
+  width: 180px
+  text-align: center
+  border: none
+  cursor: pointer
+
+
+.btn-red
+  background-color: $accent-red
+  color: #fff
+  &:hover, &:focus, &:active
+    background-color: darken($accent-red, 10%)

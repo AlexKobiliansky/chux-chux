@@ -1,0 +1,288 @@
+form
+  .form-radio-wrap
+    font-size: 12px
+    color: $text
+    label
+      display: inline-flex
+      align-items: center
+      margin-right: 45px
+      cursor: pointer
+      margin-bottom: 0
+    .jq-radio
+      margin-right: 10px
+  input[type="text"]
+    line-height: 1
+    width: 100%
+    padding: 11px 20px
+    border-radius: 20px
+    background-color: #e8e8e8
+    color: $text
+    border: 1px solid #e8e8e8
+    &::placeholder
+      color: $text
+  label.input-station-label
+    position: relative
+    input
+      position: relative
+      padding-left: 40px
+    &:before
+      content: ''
+      position: absolute
+      width: 16px
+      height: 22px
+      background-image: url('../img/icons/map-icon.svg')
+      +bg-cover
+      left: 14px
+      top: calc(50% - 11px)
+      z-index: 2
+  label.has-date-picker
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      width: 20px
+      height: 20px
+      background-image: url('../img/icons/calendar-icon.svg')
+      +bg-cover
+      right: 17px
+      top: calc(50% - 10px)
+      cursor: pointer
+    input
+      cursor: pointer
+      position: relative
+
+
+.jq-radio
+  width: 38px
+  height: 38px
+  background: #e8e8e8
+  box-shadow: none
+  border: none
+  &.focused
+    box-shadow: none
+    border: none
+  &.checked
+    .jq-radio__div
+      width: 12px
+      height: 12px
+      background: $accent-red
+      box-shadow: none
+      margin-left: auto
+      margin-right: auto
+      margin-top: calc(50% - 6px)
+
+
+.form-search-route
+  .form-radio-wrap
+    label
+      margin-bottom: 30px
+  .form-labels-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    label
+      margin-bottom: 30px
+      width: calc(33.33333% - 38px)
+  .form-bottom
+    display: flex
+    align-items: center
+    justify-content: space-between
+    label, .btn-wrap
+      width: calc(33.33333% - 38px)
+  .jq-selectbox
+    width: 180px
+  .btn-wrap
+    text-align: right
+  .return-trip
+    display: none
+    &.active
+      display: flex
+
+.form-search
+  button[type="submit"]
+    .svg
+      width: 13px
+      height: auto
+      margin-right: 9px
+      position: relative
+      top: 1px
+
+
+.change-routes
+  width: 24px
+  height: 20px
+  position: absolute
+  top: 9px
+  left: calc(33.33333% - 22px)
+  cursor: pointer
+
+
+
+
+
+
+//ui-datepicker start
+.ui-datepicker
+  width: 300px
+  background-color: #e8e8e8
+  border-radius: 15px
+  padding: 20px 17px 15px
+
+.ui-datepicker-year
+  display: none
+
+.ui-datepicker-month
+  font-size: 14px
+  font-weight: 700
+  color: $text
+
+.ui-datepicker-prev, .ui-datepicker-next
+  width: 30px!important
+  height: 30px!important
+  background-color: $accent-red
+  border-radius: 50%
+  right: 2px!important
+  top: -2px!important
+  background-image: url('../img/icons/arrow-white.svg')
+  background-size: 12px 7px
+  background-repeat: no-repeat
+  background-position: center center
+  cursor: pointer
+
+.ui-datepicker-prev
+  transform: rotate(90deg)
+
+.ui-datepicker-next
+  transform: rotate(-90deg)
+
+.ui-datepicker-header
+  margin-bottom: 15px
+
+.ui-datepicker-calendar
+  thead
+    font-size: 11px
+    color: $text
+    font-weight: 500
+  tbody
+    td
+      a
+        display: inline-flex
+        padding: 0
+        margin: 4px
+        width: 28px
+        height: 28px
+        background-color: #fff
+        border-radius: 5px
+        justify-content: center
+        align-items: center
+        font-size: 12px!important
+        font-weight: 700
+        color: $text
+        border: 2px solid #fff
+        +mt(.3s)
+        &:hover
+          border-color: $accent-red
+      &.ui-datepicker-today, &.ui-datepicker-current-day
+        a
+          border-color: $accent-red
+
+button.ui-datepicker-current
+  padding: 0!important
+  background-color: transparent
+  color: $accent-red
+  font-size: 12px
+  box-shadow: none!important
+  border: none!important
+  margin-top: 10px!important
+
+button.ui-datepicker-close
+  font-size: 12px
+  color: #fff
+  line-height: 1
+  padding: 5px!important
+  width: 60px!important
+  background-color: $accent-red
+  border-radius: 11px
+  box-shadow: none!important
+  border: none!important
+//ui-datepicker end
+
+//selectbox start
+.jq-selectbox
+  &__select
+    background: #e8e8e8!important
+    box-shadow: none!important
+    font-size: 13px
+    font-family: "Montserrat", sans-serif
+    height: auto
+    line-height: 1
+    padding: 13px 40px 13px 20px
+    color: $text
+    border-radius: 20px
+    border: 1px solid #e8e8e8
+  &__trigger
+    border-left: none
+  &__trigger-arrow
+    border: none!important
+    width: 15px
+    height: 9px
+    background-image: url('../img/icons/select-arrow.svg')
+    +bg-cover
+    right: 19px
+    top: calc(50% - 4.5px)
+  &__dropdown
+    border-radius: 15px!important
+    background-color: #e8e8e8
+    border-color: #e8e8e8
+    box-shadow: none
+    margin-top: 0
+    li
+      padding: 8px 18px
+      font-size: 13px
+      &.selected, &:hover
+        background-color: rgba(#000, .1)
+        color: $text
+    li:first-child
+      border-top-left-radius: 15px
+      border-top-right-radius: 15px
+    li:last-child
+      border-bottom-left-radius: 15px
+      border-bottom-right-radius: 15px
+
+.jq-selectbox.focused .jq-selectbox__select
+  border-color: #e8e8e8
+//selectbox start
+
+
+//checkbox start
+.jq-checkbox
+  width: 26px
+  height: 26px
+  border-radius: 5px
+  background: #e8e8e8
+  box-shadow: none
+  border: 1px solid #e8e8e8
+  margin-right: 16px
+  &.focused
+    border-color: #e8e8e8
+
+.jq-checkbox.checked .jq-checkbox__div
+  border: none!important
+  transform: none
+  width: 16px
+  height: 15px
+  background-image: url('../img/icons/check-arrow.svg')
+  +bg-cover
+  margin-left: auto
+  margin-right: auto
+  margin-top: 4px
+
+.select-label
+  display: flex
+  align-items: center
+  cursor: pointer
+
+
+
+

@@ -1,0 +1,70 @@
+.s-searchtabs
+  padding-top: 50px
+
+
+.search-tabs
+  .tabs-controls
+    padding-left: 30px
+    padding-right: 20px
+    line-height: 1
+    background-color: $accent-violet
+    border-top-right-radius: 15px
+    display: inline-block
+    font-size: 0
+    li
+      display: inline-block
+      position: relative
+      &:before, &:after
+        position: absolute
+        bottom: 0
+        content: ''
+        background: #fff
+        width: 10px
+        height: 10px
+        //+mt(.3s)
+        opacity: 0
+      &:before
+        left: -10px
+      &:after
+        right: -10px
+      a
+        font-size: 14px
+        display: inline-block
+        color: #fff
+        padding: 16px 42px
+        border-top-right-radius: 15px
+        border-top-left-radius: 15px
+        position: relative
+        z-index: 3
+        +mt(0s)
+        &:before, &:after
+          position: absolute
+          bottom: 0
+          content: ''
+          width: 20px
+          height: 20px
+          border-radius: 10px
+          background-color: $accent-violet
+          z-index: 1
+          //+mt(.3s)
+          opacity: 0
+        &:before
+          left: -20px
+        &:after
+          right: -20px
+      &.ui-tabs-active
+        a
+          background-color: #fff
+          color: $text
+          &:before, &:after
+            opacity: 1
+        &:before, &:after
+          z-index: 1
+          opacity: 1
+
+
+.tabs-contents-wrap
+  background-color: #fff
+  padding: 35px 80px 50px
+  border-radius: 15px
+  color: $text
