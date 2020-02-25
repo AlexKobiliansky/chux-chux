@@ -18,7 +18,9 @@
     color: #fff
 
 .hamburger
-  display: inline-block
+  display: block
+  width: 17px
+  height: 17px
   position: relative
   top: -4px
   cursor: pointer
@@ -39,3 +41,48 @@
       top: -6px
     &:after
       bottom: -6px
+
+.main-mnu-wrap
+  position: relative
+  display: inline-block
+
+.main-mnu-container
+  position: absolute
+  right: -90px
+  top: calc(100% + 14px)
+  z-index: 10
+  width: 180px
+  .arrow
+    position: relative
+    left: calc(50% - 21px)
+    display: inline-block
+    width: 27px
+    height: 10px
+    background-image: url('../img/icons/long-arrow-white.svg')
+    +bg-cover
+    transform: rotate(90deg)
+    opacity: 0
+    +mt(.3s)
+  &.active
+    .arrow
+      opacity: .6
+
+.main-mnu
+  display: none
+  ul
+    background-color: rgba(#000, .8)
+    border-radius: 15px
+    padding: 25px
+    width: 100%
+    margin-top: 22px
+  li
+    margin-bottom: 27px
+    &:last-child
+      margin-bottom: 0
+  a
+    font-size: 14px
+    font-weight: 500
+    color: #fff
+    line-height: 1
+    &:hover
+      color: $accent-red

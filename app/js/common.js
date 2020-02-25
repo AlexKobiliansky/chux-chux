@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+    /** MAIN-MNU START */
+    $('.hamburger').click(function(){
+        $('.main-mnu-container').toggleClass('active');
+
+        $('.main-mnu').slideToggle()
+
+        // setTimeout(function(){
+        //     $('.main-mnu').slideToggle()
+        // }, 300)
+    });
+    /** MAIN-MNU END */
+
     $('.search-tabs').tabs();
 
     function heightses() {
