@@ -154,4 +154,8 @@ $(document).ready(function(){
         return false;
     });
     /** FORMS END */
+
+    $('#totop').click(function() {
+        $('body,html').animate({scrollTop:0},600);
+    });
 });

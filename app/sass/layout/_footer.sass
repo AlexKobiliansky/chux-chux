@@ -1,0 +1,106 @@
+.main-foot
+  background-color: rgba($accent-violet, .8)
+  padding: 68px 0 78px
+
+.foot-logo
+  img
+    max-width: 140px
+
+.footer-top
+  display: flex
+  justify-content: space-between
+  margin-bottom: 95px
+  &>div
+    width: calc(50% - 30px)
+
+.footer-navs-wrap
+  padding-top: 90px
+  display: flex
+  justify-content: space-between
+
+.footer-nav
+  width: calc(50% - 20px)
+  font-size: 14px
+  li
+    margin-bottom: 14px
+  a
+    color: #fff
+    &:hover
+      text-decoration: underline
+
+.subscribe-form
+  position: relative
+  .section-title
+    margin-bottom: 25px
+  p
+    font-size: 14px
+    margin-bottom: 25px
+  label
+    margin-bottom: 27px
+    font-size: 12px
+  .select-label
+    font-size: 12px
+    line-height: 1
+    a
+      color: #fff
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+
+.footer-bottom
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+
+.foot-socials
+  display: flex
+  justify-content: space-between
+  .soc-item
+    display: inline-block
+    margin: 0 11px
+    .svg
+      width: 32px
+      height: auto
+      fill: #fff
+      +mt(.3s)
+    &:hover
+      .svg
+        fill: $accent-red
+
+.contact-us
+  font-size: 12px
+  font-weight: 500
+  color: #fff
+  &:hover
+    color: $accent-red
+
+.copyright
+  font-size: 12px
+  font-weight: 500
+
+#totop
+  position: absolute
+  z-index: 2
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 40px
+  height: 40px
+  border: 2px solid #fff
+  border-radius: 50%
+  background-color: transparent
+  +mt(.3s)
+  cursor: pointer
+  right: 0
+  bottom: 0
+  .svg
+    width: 18px
+    height: auto
+    +mt(.3s)
+    fill: $accent-red
+  &:hover
+    border-color: $accent-red
+    background-color: $accent-red
+    .svg
+      fill: #fff
