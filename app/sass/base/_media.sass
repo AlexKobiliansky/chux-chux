@@ -6,6 +6,9 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .text-item
+    width: calc(50% - 20px)
+
   .news-item
     width: calc(25% - 20px)
     &-content
@@ -95,6 +98,12 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .texts-wrap
+    flex-wrap: wrap
+
+  .text-item
+    width: 100%
 
   .s-list
     .list-item
