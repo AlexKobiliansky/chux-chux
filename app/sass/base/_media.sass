@@ -15,6 +15,11 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .advs-wrap
+    margin-left: 30px
+    margin-right: 90px
+
   .search-tabs
     &:before
       width: calc(50vw - 260px)
@@ -40,6 +45,18 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .s-advantages
+    padding-top: 30px
+
+  .advs-wrap
+    margin-left: 0
+    margin-right: 0
+    border-top-left-radius: 15px
+    border-top-right-radius: 15px
+    padding: 40px 0
+
+
   .search-tabs
     &:before
       width: calc(50vw - 170px)
@@ -65,6 +82,15 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .advs-wrap
+    flex-wrap: wrap
+    padding-bottom: 0
+  .adv-item
+    width: 50%
+    margin-bottom: 40px
+    &-icon
+      margin-bottom: 10px
 
   .user-link
     margin-right: 40px
