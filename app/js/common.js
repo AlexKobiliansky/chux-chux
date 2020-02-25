@@ -4,7 +4,7 @@ $(document).ready(function(){
 
     function heightses() {
         if ($(window).width()>480) {
-
+            $('.news-item-title').height('auto').equalHeights();
         }
 
         $('.pop-item-top').height('auto').equalHeights();

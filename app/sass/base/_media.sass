@@ -6,6 +6,12 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .news-item
+    width: calc(25% - 20px)
+    &-content
+      padding-left: 12px
+      padding-right: 12px
+
   .s-list
     .list-item
       width: calc(25% - 20px)
@@ -29,6 +35,17 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .s-news
+    padding-top: 25px
+    .section-title-wrap
+      margin-bottom: 25px
+
+  .news-wrap
+    flex-wrap: wrap
+
+  .news-item
+    width: calc(50% - 25px)
 
   .s-list
     .lists-wrap
@@ -129,6 +146,13 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .news-item
+    width: calc(100% - 40px)
+    margin-left: auto
+    margin-right: auto
+    &-img
+      //height: 240px
 
   .pop-item
     width: 100%
