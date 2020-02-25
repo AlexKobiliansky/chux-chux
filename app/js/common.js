@@ -2,9 +2,21 @@ $(document).ready(function(){
 
     $('.search-tabs').tabs();
 
+    function heightses() {
+        if ($(window).width()>480) {
+
+        }
+
+        $('.pop-item-top').height('auto').equalHeights();
+    }
+
+    $(window).resize(function() {
+        heightses();
+    });
+
+    heightses();
 
     /** FORMS START */
-
     //Переключение радио-кнопок "В одну строну"/"Туда и обратно"
     $('input[type="radio"][name="numWays"]').change(function() {
         var th = $(this),

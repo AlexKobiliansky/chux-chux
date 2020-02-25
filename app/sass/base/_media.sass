@@ -5,6 +5,16 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .pops-wrap
+    justify-content: flex-start
+
+  .pop-item
+    width: calc(33.333% - 20px)
+    margin-right: 30px
+    &:nth-child(3n)
+      margin-right: 0
+
   .search-tabs
     &:before
       width: calc(50vw - 380px)
@@ -15,6 +25,18 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .section-title
+    font-size: 24px
+    margin-bottom: 30px
+
+  .pop-item
+    width: calc(50% - 25px)
+    margin-right: 50px
+    &:nth-child(3n)
+      margin-right: 40px
+    &:nth-child(even)
+      margin-right: 0
 
   .advs-wrap
     margin-left: 30px
@@ -45,6 +67,15 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .pop-item
+    width: calc(50% - 10px)
+    margin-right: 20px
+    margin-bottom: 20px
+    &:nth-child(3n)
+      margin-right: 20px
+    &:nth-child(even)
+      margin-right: 0
 
   .s-advantages
     padding-top: 30px
@@ -82,6 +113,12 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .pop-item
+    width: 100%
+    margin-right: 0
+    &:nth-child(3n)
+      margin-right: 0
 
   .advs-wrap
     flex-wrap: wrap
@@ -151,6 +188,10 @@
     margin-top: 8px
 
 @media (max-width: 390px)
+
+  .section-title
+    font-size: 20px
+
   .top-line
     flex-wrap: wrap
 
