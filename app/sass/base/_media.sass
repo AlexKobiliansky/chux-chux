@@ -5,15 +5,143 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+  .search-tabs
+    &:before
+      width: calc(50vw - 380px)
+      left: calc(0px - (50vw - 470px))
+
+  .tabs-contents-wrap
+    padding: 25px 30px 40px
 
 // ≥992px
 +media-breakpoint-down(md)
+  .search-tabs
+    &:before
+      width: calc(50vw - 260px)
+      left: calc(0px - (50vw - 350px))
+
+  .form-search-route
+    .form-labels-wrap
+      flex-wrap: wrap
+      margin-bottom: 20px
+      label
+        width: calc(50% - 40px)
+        margin-bottom: 10px
+    .form-bottom
+      flex-wrap: wrap
+      label, .btn-wrap
+        width: calc(50% - 40px)
+        margin-bottom: 10px
+      .jq-selectbox, .btn
+        width: 100%
+
+  .change-routes
+    left: calc(50% - 12px)
 
 // ≥768px
 +media-breakpoint-down(sm)
+  .search-tabs
+    &:before
+      width: calc(50vw - 170px)
+      left: calc(0px - (50vw - 260px))
+
+  .search-tabs .tabs-controls li a
+    padding: 10px 25px
+
+  .form-search-route
+    .form-labels-wrap
+      label
+        width: calc(50% - 20px)
+    .form-bottom
+      label, .btn-wrap
+        width: calc(50% - 20px)
+
+  .socials
+    padding-top: 20px
+    flex-direction: row
+    justify-content: center
+    .soc-item
+      margin: 0 10px
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .user-link
+    margin-right: 40px
+
+  .search-tabs
+    &:before
+      width: 100vw
+      left: -10px
+
+  .search-tabs
+    .tabs-controls
+      padding-left: 0
+      padding-right: 0
+      li
+        &:before, &:after
+          display: none
+        a
+          font-size: 12px
+          padding: 12px 12.5px
+          &:before, &:after
+            display: none
+
+  .tabs-contents-wrap
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+
+  .form-search-route
+    .form-radio-wrap
+      margin-bottom: 20px
+      label
+        margin-right: 0
+        width: 100%
+        margin-bottom: 10px
+    .form-labels-wrap
+      label
+        width: 100%
+        &:first-of-type
+          margin-bottom: 40px
+    .form-bottom
+      label
+        margin-bottom: 20px
+      label, .btn-wrap
+        width: 100%
+      .select-label
+        justify-content: center
+
+
+  .change-routes
+    top: 50px
+
+  .jq-radio
+    width: 24px
+    height: 24px
+
+  .jq-radio.checked .jq-radio__div
+    width: 8px
+    height: 8px
+    margin-top: 8px
+
+@media (max-width: 390px)
+  .top-line
+    flex-wrap: wrap
+
+  .topline-part
+    width: 100%
+    &.logo
+      margin-bottom: 40px
+      width: 100%
+      img
+        display: block
+        margin-left: auto
+        margin-right: auto
+        max-width: 200px
+
+  .topline-links
+    display: flex
+    justify-content: space-between
 
 
 /*==========  Mobile First  ==========*/

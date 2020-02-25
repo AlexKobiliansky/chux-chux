@@ -34,6 +34,23 @@ $(document).ready(function(){
        arrival.val(departureValue);
     });
 
+    var cities = ["Москва-1", "Москва-2", "Москва-3", "Москва-4", "Москва-5",
+        "Москва-6", "Москва-7", "Москва-8", "Москва-9", "Москва-10"];
+
+    $('.input-station-label input').autocomplete({
+        source: cities,
+        minLength: 3,
+        change: function (event, ui) {
+            if(!ui.item){
+                //http://api.jqueryui.com/autocomplete/#event-change -
+                // The item selected from the menu, if any. Otherwise the property is null
+                //so clear the item for force selection
+                $(this).val("");
+            }
+
+        }
+    });
+
     $('input[type="radio"], select, input[type="checkbox"]').styler();
 
     function formatDate(date) {

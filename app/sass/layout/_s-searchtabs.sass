@@ -3,6 +3,15 @@
 
 
 .search-tabs
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    width: calc(50vw - 500px)
+    height: 270px
+    background-color: $accent-violet
+    left: calc(0px - (50vw - 590px))
+    top: 0
   .tabs-controls
     padding-left: 30px
     padding-right: 20px
@@ -11,6 +20,8 @@
     border-top-right-radius: 15px
     display: inline-block
     font-size: 0
+    position: relative
+    z-index: 2
     li
       display: inline-block
       position: relative
@@ -68,3 +79,24 @@
   padding: 35px 80px 50px
   border-radius: 15px
   color: $text
+  position: relative
+  z-index: 2
+
+.socials
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-end
+  padding-top: 90px
+  .soc-item
+    display: inline-block
+    margin-bottom: 10px
+    .svg
+      width: 32px
+      height: auto
+      fill: #fff
+      +mt(.3s)
+    &:hover
+      .svg
+        fill: $accent-red
