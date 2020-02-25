@@ -1,0 +1,49 @@
+.review-item
+  padding: 30px 45px 35px
+  background-color: rgba(#000, .7)
+  border-radius: 15px
+  margin-bottom: 15px
+  &-top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    line-height: 1
+    margin-bottom: 15px
+  &-name
+    font-size: 16px
+    font-weight: 500
+  &-date
+    display: inline-block
+    font-size: 12px
+    padding: 6px
+    width: 100px
+    border: 1px solid #67287e
+    text-align: center
+    border-radius: 15px
+
+.reviews-more-wrap
+  text-align: center
+  font-size: 14px
+  font-weight: 500
+  margin-top: 45px
+  span
+    display: inline-block
+    margin-bottom: 17px
+
+.reviews-more
+  width: 38px
+  height: 38px
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $accent-red
+  border-radius: 50%
+  margin-left: auto
+  margin-right: auto
+  cursor: pointer
+  +mt(.3s)
+  .svg
+    width: 15px
+    height: auto
+  &:hover
+    background-color: darken($accent-red, 10%)

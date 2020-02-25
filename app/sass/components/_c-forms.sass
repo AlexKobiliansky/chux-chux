@@ -20,21 +20,6 @@ form
     border: 1px solid #e8e8e8
     &::placeholder
       color: $text
-  label.input-station-label
-    position: relative
-    input
-      position: relative
-      padding-left: 40px
-    &:before
-      content: ''
-      position: absolute
-      width: 16px
-      height: 22px
-      background-image: url('../img/icons/map-icon.svg')
-      +bg-cover
-      left: 14px
-      top: calc(50% - 11px)
-      z-index: 2
   label.has-date-picker
     position: relative
     &:after
@@ -98,6 +83,21 @@ form
     display: none
     &.active
       display: flex
+  label.input-station-label
+    position: relative
+    input
+      position: relative
+      padding-left: 40px
+    &:before
+      content: ''
+      position: absolute
+      width: 16px
+      height: 22px
+      background-image: url('../img/icons/map-icon.svg')
+      +bg-cover
+      left: 14px
+      top: calc(50% - 11px)
+      z-index: 2
 
 .form-search
   button[type="submit"]
@@ -107,6 +107,15 @@ form
       margin-right: 9px
       position: relative
       top: 1px
+
+.form-search-station
+  .form-labels-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+  label
+    margin-bottom: 0
+    width: calc(100% - 200px)
 
 
 .change-routes
