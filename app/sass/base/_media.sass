@@ -186,7 +186,8 @@
         width: calc(50% - 20px)
 
   .socials
-    padding-top: 20px
+    padding-bottom: 30px
+    padding-top: 0
     flex-direction: row
     justify-content: center
     .soc-item
@@ -236,14 +237,24 @@
       //height: 240px
 
   .pop-item
-    width: 100%
-    margin-right: 0
+    width: calc(100% - 40px)
+    margin-right: auto
+    margin-left: auto
     &:nth-child(3n)
-      margin-right: 0
+      margin-right: auto
+    &:nth-child(even)
+      margin-right: auto
+
+  .s-advantages
+    padding-top: 0
 
   .advs-wrap
     flex-wrap: wrap
     padding-bottom: 0
+    margin-left: 40px
+    margin-right: 40px
+    border-top-left-radius: 0
+    border-top-right-radius: 0
   .adv-item
     width: 50%
     margin-bottom: 40px
@@ -252,6 +263,10 @@
 
   .user-link
     margin-right: 40px
+    display: none
+
+  .s-searchtabs
+    padding-top: 15px
 
   .search-tabs
     &:before
@@ -323,35 +338,43 @@
 
 @media (max-width: 390px)
 
+  .adv-item
+    font-size: 10px
+    margin-bottom: 25px
+    &-icon
+      height: 30px
+
+
   .subscribe-form
     .select-label
       font-size: 11px
 
-  .s-list
-    .list-item
-      width: 100%
-      margin-bottom: 20px
+  //.s-list
+  //  .list-item
+  //    width: 100%
+  //    margin-bottom: 20px
 
   .section-title
     font-size: 20px
 
   .top-line
     flex-wrap: wrap
+    padding-top: 30px
 
-  .topline-part
-    width: 100%
-    &.logo
-      margin-bottom: 40px
-      width: 100%
-      img
-        display: block
-        margin-left: auto
-        margin-right: auto
-        max-width: 200px
+  //.topline-part
+  //  width: 100%
+  //  &.logo
+  //    margin-bottom: 40px
+  //    width: 100%
+  //    img
+  //      display: block
+  //      margin-left: auto
+  //      margin-right: auto
+  //      max-width: 200px
 
-  .topline-links
-    display: flex
-    justify-content: space-between
+  //.topline-links
+  //  display: flex
+  //  justify-content: space-between
 
 
 /*==========  Mobile First  ==========*/

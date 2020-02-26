@@ -27,6 +27,22 @@
 </head>
 
 <body>
+<!-- preloader -->
+<div class="preloader">
+	<div id="cube-loader">
+		<div class="caption">
+			<div class="cube-loader">
+				<div class="cube loader-1"></div>
+				<div class="cube loader-2"></div>
+				<div class="cube loader-4"></div>
+				<div class="cube loader-3"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /preloader -->
+
+
 <div id="page-container-wrap">
 	<div id="page-container">
 		<!-- HEADER START -->
@@ -68,7 +84,7 @@
 		<section class="s-searchtabs">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-11">
+					<div class="col-md-11 order-2 order-md-1">
 						<div class="search-tabs">
 							<ul class="tabs-controls">
 								<li><a href="#searchtab-1">По маршруту</a></li>
@@ -103,10 +119,6 @@
 										</div>
 
 										<div class="form-labels-wrap return-trip">
-
-											<!-- change-routes -->
-											<div class="change-routes"><img src="img/icons/change-arrows.png" alt="alt"></div>
-											<!-- /change-routes -->
 
 											<label class="input-station-label">
 												<input type="text" placeholder="Станция отправления" name="Станция отправления" data-validation="required">
@@ -165,7 +177,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-1">
+					<div class="col-md-1 order-1 order-md-2">
 						<div class="socials">
 							<!-- soc-item -->
 							<a href="#0" class="soc-item" target="_blank">
@@ -584,7 +596,7 @@
 								<input type="text" data-validation="email" name="email" placeholder="E-mail" autocomplete="off">
 							</label>
 							<label class="select-label">
-								<input type="checkbox" name="agreement" checked>
+								<input type="checkbox" name="agreement" checked required>
 								<span>Я соглашаюсь с <a href="#0">Общими коммерческими <br> условиями</a> и <a href="#0">Политикой конфиденциальности</a></span>
 							</label>
 							<div class="btn-wrap">

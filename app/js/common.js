@@ -28,7 +28,15 @@ $(document).ready(function(){
 
     heightses();
 
+    $('.preloader').fadeOut();
+
     /** FORMS START */
+
+    $.validate({
+        form : 'form',
+        scrollToTopOnError: false
+    });
+
     //Переключение радио-кнопок "В одну строну"/"Туда и обратно"
     $('input[type="radio"][name="numWays"]').change(function() {
         var th = $(this),
