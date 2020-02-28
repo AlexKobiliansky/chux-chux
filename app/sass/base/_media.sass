@@ -196,6 +196,18 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .top-line
+    +mt(.3s)
+    &.sticky
+      position: fixed
+      left: 0
+      top: 0
+      width: 100%
+      background-color: rgba($accent-num, .9)
+      padding-left: 15px
+      padding-right: 15px
+      padding-top: 17px
+      z-index: 999
   .review-item
     padding: 23px 23px 30px
     font-size: 11px
@@ -335,6 +347,28 @@
     width: 8px
     height: 8px
     margin-top: 8px
+
+  .top-line
+    padding-left: 5px
+    padding-right: 5px
+    .logo
+      width: 160px
+
+  .hamburger
+    width: 30px
+    span
+      width: 30px
+      height: 3px
+      &:before, &:after
+        width: 30px
+        height: 3px
+      &:before
+        top: -9px
+      &:after
+        bottom: -9px
+
+  .main-mnu-container .arrow
+    right: 11px
 
 @media (max-width: 390px)
 
