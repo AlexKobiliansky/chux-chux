@@ -18,6 +18,12 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .route-results-topline
+    flex-wrap: wrap
+    .section-title
+      width: 100%
+      margin-bottom: 20px
+
   .s-reviews
     padding-top: 50px
 
@@ -61,6 +67,10 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .route-results-topline
+    .res-route
+      margin-right: 30px
 
   .footer-navs-wrap
     flex-wrap: wrap
@@ -130,6 +140,13 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .route-results-topline
+    padding: 40px 0
+    .res-route
+      margin-right: 0
+      width: 100%
+      margin-bottom: 20px
+
   .footer-top
     flex-wrap: wrap
     &>div
@@ -196,18 +213,23 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
-  .top-line
-    +mt(.3s)
-    &.sticky
+  .route-results-topline
+    font-size: 14px
+    padding-bottom: 20px
+
+  #page-container.sticky
+    .main-head
       position: fixed
       left: 0
       top: 0
       width: 100%
       background-color: rgba($accent-num, .9)
-      padding-left: 15px
-      padding-right: 15px
-      padding-top: 17px
       z-index: 999
+      .top-line
+        padding-top: 17px
+    .s-searchtabs
+      padding-top: 99px
+
   .review-item
     padding: 23px 23px 30px
     font-size: 11px

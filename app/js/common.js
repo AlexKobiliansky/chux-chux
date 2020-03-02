@@ -28,6 +28,17 @@ $(document).ready(function(){
 
     heightses();
 
+    $('.res-route-slider').owlCarousel({
+        loop:false,
+        nav: true,
+        items: 3,
+        margin: 10,
+        dots: false,
+        startPosition: 1,
+        center: true,
+        navText: ["",""],
+    });
+
     $('.preloader').fadeOut();
 
     /** FORMS START */
@@ -161,10 +172,10 @@ $(document).ready(function(){
     });
 
     $(window).scroll(function() {
-        if($(this).scrollTop() > 80) {
-            $('.top-line').addClass('sticky');
+        if($(this).scrollTop() > 13) {
+            $('#page-container').addClass('sticky');
         } else {
-            $('.top-line').removeClass('sticky');
+            $('#page-container').removeClass('sticky');
         }
     });
 

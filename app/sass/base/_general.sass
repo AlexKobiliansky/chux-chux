@@ -183,3 +183,28 @@ ul
     opacity: 0
 
 //end preloader
+
+
+.owl-carousel
+  .owl-nav
+    button.owl-prev, button.owl-next
+      width: 38px
+      height: 38px
+      border: 2px solid $accent-red
+      background-color: rgba(#000, .7)
+      border-radius: 50%
+      background-size: 15px 9px
+      background-position: center center
+      background-repeat: no-repeat
+      background-image: url('../img/icons/short-arrow-white.svg')
+      +mt(.3s)
+      &:hover
+        background-color: $accent-red
+    button.owl-prev
+      transform: rotate(90deg)
+    button.owl-next
+      transform: rotate(-90deg)
+
+.owl-item.active.center
+  .date-slide
+    border-color: $accent-red

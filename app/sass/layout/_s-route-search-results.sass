@@ -1,0 +1,181 @@
+.route-results-topline
+  font-size: 18px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  line-height: 1
+  padding: 70px 0 60px
+  .section-title
+    margin-bottom: 0
+  .res-route
+    display: flex
+    align-items: center
+    max-width: 360px
+    margin-right: 75px
+    &>div
+      max-width: calc(50% - 30px)
+      width: auto
+    .from
+      margin-right: 60px
+      position: relative
+      &:after
+        content: ''
+        position: absolute
+        background-image: url('../img/icons/long-arrow-white.svg')
+        +bg-cover
+        width: 28px
+        height: 10px
+        top: calc(50% - 5px)
+        right: -45px
+  .res-cost
+    font-weight: 700
+
+
+.res-route-slider
+  margin-right: 130px
+  margin-bottom: 12px
+  margin-left: 50px
+  position: relative
+  width: calc(100% - 180px)
+  .owl-nav
+    position: absolute
+    left: 0
+    top: calc(50% - 19px)
+    width: 100%
+    button.owl-prev, button.owl-next
+      position: absolute
+    button.owl-prev
+      left: -50px
+    button.owl-next
+      right: -50px
+
+
+.owl-item.active.center
+  .date-slide
+    border-color: $accent-red
+
+
+.date-slide
+  line-height: 1
+  color: #fff
+  background-color: rgba(#000, .7)
+  padding: 11px 0 10px
+  display: block
+  text-align: center
+  border: 2px solid rgba(#000, .7)
+  border-radius: 40px
+  &:hover
+    border-color: $accent-red
+
+
+.route-result-items
+  .result-item
+    position: relative
+    background-color: rgba(#000, .7)
+    padding: 20px 0 30px 30px
+    border-top-left-radius: 15px
+    border-bottom-left-radius: 15px
+    margin-bottom: 13px
+    display: flex
+    justify-content: space-between
+    &:after
+      content: ''
+      position: absolute
+      background-color: rgba(#000, .7)
+      height: 100%
+      width: calc(50vw - 590px)
+      right: calc(0px - (50vw - 590px))
+      top: 0
+    .top
+      font-size: 12px
+      color: #6e6e6e
+      margin-bottom: 12px
+    &-stations
+      width: 60%
+      .top
+        padding-left: 100px
+      .station
+        padding-left: 77px
+        position: relative
+        &-name
+          padding-left: 23px
+          font-size: 16px
+          font-weight: 500
+        &-type
+          font-size: 12px
+          font-weight: 300
+          padding-left: 23px
+        &-departure
+          margin-bottom: 30px
+          &:before
+            content: ''
+            position: absolute
+            width: 13px
+            height: 13px
+            border: 1px solid $accent-red
+            border-radius: 50%
+            left: 77px
+            top: 4px
+          &:after
+            content: ''
+            position: absolute
+            width: 11px
+            height: 18px
+            background-image: url('../img/icons/mid-arrow.svg')
+            +bg-cover
+            left: 78px
+            top: 34px
+        &-arrival
+          &:before
+            content: ''
+            position: absolute
+            width: 13px
+            height: 13px
+            border: 1px solid $accent-red
+            border-radius: 50%
+            left: 77px
+            top: 4px
+            background-color: $accent-red
+      .time
+        font-size: 13px
+        line-height: 1
+        padding: 4px
+        width: 54px
+        text-align: center
+        border: 1px solid #67287e
+        border-radius: 20px
+        position: absolute
+        left: 12px
+        top: -2px
+    &-duration
+      text-align: center
+      font-size: 14px
+      display: flex
+      flex-direction: column
+      .transfer
+        margin-top: auto
+        margin-bottom: 16px
+    &-cost
+      text-align: right
+      display: flex
+      flex-direction: column
+      .cost
+        font-size: 20px
+        font-weight: 700
+    &-link
+      width: 66px
+      height: 36px
+      display: flex
+      justify-content: center
+      align-items: center
+      background-color: $accent-red
+      border-radius: 20px
+      margin-left: auto
+      margin-right: auto
+      margin-top: auto
+      margin-bottom: 8px
+      &:hover
+        background-color: darken($accent-red, 10%)
+      .svg
+        width: 27px
+        height: auto

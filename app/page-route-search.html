@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+<!-- preloader -->
+<div class="preloader">
+	<div id="cube-loader">
+		<div class="caption">
+			<div class="cube-loader">
+				<div class="cube loader-1"></div>
+				<div class="cube loader-2"></div>
+				<div class="cube loader-4"></div>
+				<div class="cube loader-3"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /preloader -->
+
+
+<div id="page-container-wrap">
+	<div id="page-container">
+		<!-- HEADER START -->
+		<header class="main-head">
+			<div class="container">
+				<div class="top-line">
+					<a href="/" class="logo topline-part">
+						<img src="img/logo.svg" alt="alt" class="img-responsive">
+					</a>
+					<div class="topline-links topline-part">
+						<a href="#0" class="user-link">Вход | Регистрация</a>
+
+						<div class="main-mnu-wrap">
+							<a href="#0" class="hamburger">
+								<span></span>
+							</a>
+
+							<div class="main-mnu-container">
+								<div class="arrow"></div>
+								<nav class="main-mnu">
+									<ul>
+										<li><a href="#0">Главная</a></li>
+										<li><a href="#0">Новости</a></li>
+										<li><a href="#0">Отзывы</a></li>
+										<li><a href="#0">Подписка</a></li>
+										<li><a href="#0">Связаться с нами</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- ======= HEADER END ======= -->
+
+		<!-- ======= SECTION SEARCHTABS START ======= -->
+		<section class="s-searchtabs">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-11 order-2 order-md-1">
+						<div class="search-tabs">
+							<ul class="tabs-controls">
+								<li><a href="#searchtab-1">По маршруту</a></li>
+								<li><a href="#searchtab-2">По станции</a></li>
+								<li><a href="#searchtab-3">По номеру</a></li>
+							</ul>
+							<div class="tabs-contents-wrap">
+								<div class="tab-content" id="searchtab-1">
+									<form class="form-search form-search-route">
+										<div class="form-radio-wrap" id="ways-number">
+											<label class="checked"><input id="one-way" type="radio" name="numWays" value="oneway" checked> В один конец</label>
+											<label><input id="two-ways" type="radio" name="numWays" value="roundtrip"> Туда и обратно<br></label>
+										</div>
+
+										<div class="form-labels-wrap">
+
+											<!-- change-routes -->
+											<div class="change-routes"><img src="img/icons/change-arrows.png" alt="alt"></div>
+											<!-- /change-routes -->
+
+											<label class="input-station-label">
+												<input type="text" placeholder="Станция отправления" name="Станция отправления" data-validation="required" class="departure">
+											</label>
+
+											<label class="input-station-label">
+												<input type="text" placeholder="Станция прибытия" name="Станция прибытия" data-validation="required" class="arrival">
+											</label>
+
+											<label class="has-date-picker">
+												<input type="text" placeholder="Выбрать дату" name="Станция прибытия" data-validation="required" class="date-picker">
+											</label>
+										</div>
+
+										<div class="form-labels-wrap return-trip">
+
+											<label class="input-station-label">
+												<input type="text" placeholder="Станция отправления" name="Станция отправления" data-validation="required">
+											</label>
+
+											<label class="input-station-label">
+												<input type="text" placeholder="Станция прибытия" name="Станция прибытия" data-validation="required">
+											</label>
+
+											<label class="has-date-picker">
+												<input type="text" placeholder="Выбрать дату" name="Станция прибытия" data-validation="required" class="date-picker">
+											</label>
+										</div>
+
+										<div class="form-bottom">
+											<label>
+												<select name="Тип поезда" class="form-select">
+													<option value="Поезд">Поезд</option>
+													<option value="Электричка">Электричка</option>
+													<option value="Фирменный поезд">Фирменный поезд</option>
+												</select>
+											</label>
+
+											<label class="select-label">
+												<input type="checkbox" name="Без пересадок" checked>Без пересадок
+											</label>
+
+											<div class="btn-wrap">
+												<button type="submit" class="btn btn-red"><img src="img/icons/search-icon.svg" alt="alt" class="svg">Найти</button>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="tab-content" id="searchtab-2">
+									<form class="form-search form-search-station">
+										<div class="form-labels-wrap">
+											<label class="input-station-label">
+												<input type="text" placeholder="Название станции" name="Название станции" data-validation="required">
+											</label>
+
+											<button type="submit" class="btn btn-red"><img src="img/icons/search-icon.svg" alt="alt" class="svg">Найти</button>
+										</div>
+									</form>
+								</div>
+								<div class="tab-content" id="searchtab-3">
+									<form class="form-search form-search-station">
+										<div class="form-labels-wrap">
+											<label>
+												<input type="text" placeholder="Номер рейса" name="Номер рейса" data-validation="required">
+											</label>
+
+											<button type="submit" class="btn btn-red"><img src="img/icons/search-icon.svg" alt="alt" class="svg">Найти</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-1 order-1 order-md-2">
+						<div class="socials">
+							<!-- soc-item -->
+							<a href="#0" class="soc-item" target="_blank">
+								<img src="img/icons/soc-icon-1.svg" alt="alt" class="svg">
+							</a>
+							<!-- /soc-item -->
+
+							<!-- soc-item -->
+							<a href="#0" class="soc-item" target="_blank">
+								<img src="img/icons/soc-icon-2.svg" alt="alt" class="svg">
+							</a>
+							<!-- /soc-item -->
+
+							<!-- soc-item -->
+							<a href="#0" class="soc-item" target="_blank">
+								<img src="img/icons/soc-icon-3.svg" alt="alt" class="svg">
+							</a>
+							<!-- /soc-item -->
+
+							<!-- soc-item -->
+							<a href="#0" class="soc-item" target="_blank">
+								<img src="img/icons/soc-icon-4.svg" alt="alt" class="svg">
+							</a>
+							<!-- /soc-item -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ======= SECTION SEARCHTABS END ======= -->
+
+		<!-- ======= SECTION ROUTE-SEARCH-RESULTS START ======= -->
+		<section class="s-route-search-results">
+			<div class="container">
+				<div class="route-results-topline">
+					<h2 class="section-title">Результаты поиска</h2>
+					<div class="res-route">
+						<div class="from">Санкт-Петербург</div>
+						<div class="to">Усть-Каменогорск</div>
+
+<!--						<div class="from">Симферополь</div>-->
+<!--						<div class="to">Москва</div>-->
+					</div>
+					<div class="res-num">Найдено <span>134</span> рейса</div>
+					<div class="res-cost">от 1400 &#8381;</div>
+				</div>
+
+				<div class="route-results-wrap">
+					<div class="row">
+						<div class="col-xl-3">
+							<aside class="route-search-filter">
+								
+							</aside>
+						</div>
+						<div class="col-xl-8 offset-xl-1">
+							<div class="res-dates-slider res-route-slider owl-carousel">
+								<!-- slide start -->
+								<a href="#0" class="date-slide">Четверг, 20 марта</a>
+								<!-- slide end -->
+
+								<!-- slide start -->
+								<a href="#0" class="date-slide">Пятница, 21 марта</a>
+								<!-- slide end -->
+
+								<!-- slide start -->
+								<a href="#0" class="date-slide">Суббота, 22 марта</a>
+								<!-- slide end -->
+
+								<!-- slide start -->
+								<a href="#0" class="date-slide">Воскресенье, 23 марта</a>
+								<!-- slide end -->
+
+								<!-- slide start -->
+								<a href="#0" class="date-slide">Понедельник, 24 марта</a>
+								<!-- slide end -->
+
+								<!-- slide start -->
+								<a href="#0" class="date-slide">Вторник, 25 марта</a>
+								<!-- slide end -->
+
+								<!-- slide start -->
+								<a href="#0" class="date-slide">Среда, 26 марта</a>
+								<!-- slide end -->
+
+								<!-- slide start -->
+								<a href="#0" class="date-slide">Четверг, 27 марта</a>
+								<!-- slide end -->
+							</div>
+
+							<div class="route-result-items">
+								<!-- route-result-item -->
+								<div class="result-item">
+									<div class="result-item-stations">
+										<div class="top">Отправление/Прибытие</div>
+										<div class="stations">
+											<div class="station-departure station">
+												<div class="time">06:45</div>
+												<div class="station-name">г. Симферополь (ст. Суховская)</div>
+												<div class="station-type">Тип станции: Станция</div>
+											</div>
+
+											<div class="station-arrival station">
+												<div class="time">13:10</div>
+												<div class="station-name">г. Москва (Казанский вокзал)</div>
+												<div class="station-type">Тип станции: Вокзал</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="result-item-duration">
+										<div class="top">В пути/Пересадки</div>
+										<div class="duration">07:05:00</div>
+										<div class="transfer">Прямой</div>
+									</div>
+
+									<div class="result-item-cost">
+										<div class="top">Стоимость</div>
+										<div class="cost">1 400 &#8381;</div>
+										<a href="#0" class="result-item-link">
+											<img src="img/icons/long-arrow-white.svg" alt="alt" class="svg">
+										</a>
+									</div>
+								</div>
+								<!-- /route-result-item -->
+
+								<!-- route-result-item -->
+								<div class="result-item">
+									<div class="result-item-stations">
+										<div class="top">Отправление/Прибытие</div>
+										<div class="stations">
+											<div class="station-departure station">
+												<div class="time">06:45</div>
+												<div class="station-name">г. Симферополь (ст. Суховская)</div>
+												<div class="station-type">Тип станции: Станция</div>
+											</div>
+
+											<div class="station-arrival station">
+												<div class="time">13:10</div>
+												<div class="station-name">г. Москва (Казанский вокзал)</div>
+												<div class="station-type">Тип станции: Вокзал</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="result-item-duration">
+										<div class="top">В пути/Пересадки</div>
+										<div class="duration">07:05:00</div>
+										<div class="transfer">Прямой</div>
+									</div>
+
+									<div class="result-item-cost">
+										<div class="top">Стоимость</div>
+										<div class="cost">1 400 &#8381;</div>
+										<a href="#0" class="result-item-link">
+											<img src="img/icons/long-arrow-white.svg" alt="alt" class="svg">
+										</a>
+									</div>
+								</div>
+								<!-- /route-result-item -->
+
+								<!-- route-result-item -->
+								<div class="result-item">
+									<div class="result-item-stations">
+										<div class="top">Отправление/Прибытие</div>
+										<div class="stations">
+											<div class="station-departure station">
+												<div class="time">06:45</div>
+												<div class="station-name">г. Симферополь (ст. Суховская)</div>
+												<div class="station-type">Тип станции: Станция</div>
+											</div>
+
+											<div class="station-arrival station">
+												<div class="time">13:10</div>
+												<div class="station-name">г. Москва (Казанский вокзал)</div>
+												<div class="station-type">Тип станции: Вокзал</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="result-item-duration">
+										<div class="top">В пути/Пересадки</div>
+										<div class="duration">07:05:00</div>
+										<div class="transfer">Прямой</div>
+									</div>
+
+									<div class="result-item-cost">
+										<div class="top">Стоимость</div>
+										<div class="cost">1 400 &#8381;</div>
+										<a href="#0" class="result-item-link">
+											<img src="img/icons/long-arrow-white.svg" alt="alt" class="svg">
+										</a>
+									</div>
+								</div>
+								<!-- /route-result-item -->
+
+								<!-- route-result-item -->
+								<div class="result-item">
+									<div class="result-item-stations">
+										<div class="top">Отправление/Прибытие</div>
+										<div class="stations">
+											<div class="station-departure station">
+												<div class="time">06:45</div>
+												<div class="station-name">г. Симферополь (ст. Суховская)</div>
+												<div class="station-type">Тип станции: Станция</div>
+											</div>
+
+											<div class="station-arrival station">
+												<div class="time">13:10</div>
+												<div class="station-name">г. Москва (Казанский вокзал)</div>
+												<div class="station-type">Тип станции: Вокзал</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="result-item-duration">
+										<div class="top">В пути/Пересадки</div>
+										<div class="duration">07:05:00</div>
+										<div class="transfer">Прямой</div>
+									</div>
+
+									<div class="result-item-cost">
+										<div class="top">Стоимость</div>
+										<div class="cost">1 400 &#8381;</div>
+										<a href="#0" class="result-item-link">
+											<img src="img/icons/long-arrow-white.svg" alt="alt" class="svg">
+										</a>
+									</div>
+								</div>
+								<!-- /route-result-item -->
+
+								<!-- route-result-item -->
+								<div class="result-item">
+									<div class="result-item-stations">
+										<div class="top">Отправление/Прибытие</div>
+										<div class="stations">
+											<div class="station-departure station">
+												<div class="time">06:45</div>
+												<div class="station-name">г. Симферополь (ст. Суховская)</div>
+												<div class="station-type">Тип станции: Станция</div>
+											</div>
+
+											<div class="station-arrival station">
+												<div class="time">13:10</div>
+												<div class="station-name">г. Москва (Казанский вокзал)</div>
+												<div class="station-type">Тип станции: Вокзал</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="result-item-duration">
+										<div class="top">В пути/Пересадки</div>
+										<div class="duration">07:05:00</div>
+										<div class="transfer">Прямой</div>
+									</div>
+
+									<div class="result-item-cost">
+										<div class="top">Стоимость</div>
+										<div class="cost">1 400 &#8381;</div>
+										<a href="#0" class="result-item-link">
+											<img src="img/icons/long-arrow-white.svg" alt="alt" class="svg">
+										</a>
+									</div>
+								</div>
+								<!-- /route-result-item -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ======= SECTION ROUTE-SEARCH-RESULTS END ======= -->
+
+		<!-- ======= FOOTER START ======= -->
+		<footer class="main-foot">
+			<div class="container">
+				<div class="footer-top">
+					<div class="footer-left">
+						<a href="/" class="foot-logo">
+							<img src="img/logo.svg" alt="alt" class="img-responsive">
+						</a>
+						<div class="footer-navs-wrap">
+							<nav class="footer-nav">
+								<ul>
+									<li><a href="#0">Лучшие предложения</a></li>
+									<li><a href="#0">Новости</a></li>
+									<li><a href="#0">Подписка</a></li>
+									<li><a href="#0">Вход|Регистрация</a></li>
+								</ul>
+							</nav>
+
+							<nav class="footer-nav">
+								<ul>
+									<li><a href="#0">Ответы на вопросы</a></li>
+									<li><a href="#0">Права пассажиров</a></li>
+									<li><a href="#0">Политика конфиденциальности</a></li>
+									<li><a href="#0">Контакты</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="footer-right">
+						<form class="subscribe-form">
+							<h3 class="section-title">Подписка на новости и акции</h3>
+							<p>Подпишитесь на нашу рассылку и первыми узнавайте о скидках и спецпредложениях. Вы можете отписаться от рассылки в любой момент</p>
+							<label>
+								<input type="text" data-validation="email" name="email" placeholder="E-mail" autocomplete="off">
+							</label>
+							<label class="select-label">
+								<input type="checkbox" name="agreement" checked required>
+								<span>Я соглашаюсь с <a href="#0">Общими коммерческими <br> условиями</a> и <a href="#0">Политикой конфиденциальности</a></span>
+							</label>
+							<div class="btn-wrap">
+								<button type="submit" class="btn btn-red">Подписаться</button>
+							</div>
+
+							<a href="#0" id="totop"><img src="img/icons/short-arrow.svg" alt="alt" class="svg"></a>
+						</form>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<a href="#0" class="contact-us">Связаться с нами</a>
+					<div class="foot-socials">
+						<!-- soc-item -->
+						<a href="#0" class="soc-item" target="_blank">
+							<img src="img/icons/soc-icon-1.svg" alt="alt" class="svg">
+						</a>
+						<!-- /soc-item -->
+
+						<!-- soc-item -->
+						<a href="#0" class="soc-item" target="_blank">
+							<img src="img/icons/soc-icon-2.svg" alt="alt" class="svg">
+						</a>
+						<!-- /soc-item -->
+
+						<!-- soc-item -->
+						<a href="#0" class="soc-item" target="_blank">
+							<img src="img/icons/soc-icon-3.svg" alt="alt" class="svg">
+						</a>
+						<!-- /soc-item -->
+
+						<!-- soc-item -->
+						<a href="#0" class="soc-item" target="_blank">
+							<img src="img/icons/soc-icon-4.svg" alt="alt" class="svg">
+						</a>
+						<!-- /soc-item -->
+					</div>
+					<div class="copyright">&copy; ООО "Чух чух", 2020</div>
+				</div>
+			</div>
+		</footer>
+		<!-- ======= FOOTER END ======= -->
+	</div>
+</div>
+
+<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
