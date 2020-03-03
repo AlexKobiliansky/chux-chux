@@ -229,6 +229,88 @@
 					<div class="row">
 						<div class="col-xl-3">
 							<aside class="route-search-filter">
+								<form>
+									<label>
+										<select name="cruise-time" class="form-select">
+											<option value="Самые ранние">Самые ранние</option>
+											<option value="Самые поздние">Самые поздние</option>
+											<option value="Не важно">Не важно</option>
+										</select>
+									</label>
+
+									<label class="select-label">
+										<input type="checkbox" name="non-stop">Только прямые рейсы
+									</label>
+
+									<label class="select-label">
+										<input type="checkbox" name="one-change">C 1 пересадкой
+									</label>
+
+									<div class="ranges">
+										<div class="label">
+											<h4 class="range-title">Отправление из: <span>Симферополь</span></h4>
+											<div class="values-wrap">
+												<span class="range-value departure-min" id="departure-min"><span id="day-departure-min">ПН</span> <span id="time-departure-min">14</span></span>
+												<span class="range-value departure-max" id="departure-max"><span id="day-departure-max">ПН</span> <span id="time-departure-max">14</span></span>
+											</div>
+
+											<span class="range-wrap">
+												<span class="range" id="range-departure" data-date="2020-06-06"></span>
+											</span>
+
+										</div>
+
+										<div class="label">
+											<h4 class="range-title">Прибытие в: <span>Москву</span></h4>
+											<div class="values-wrap">
+												<span class="range-value departure-min" id="arrival-min"><span id="day-arrival-min">ПН</span> <span id="time-arrival-min">14</span></span>
+												<span class="range-value departure-max" id="arrival-max"><span id="day-arrival-max">ПН</span> <span id="time-arrival-max">14</span></span>
+											</div>
+
+											<span class="range-wrap">
+												<span class="range" id="range-arrival" data-date="2020-06-06"></span>
+											</span>
+										</div>
+									</div>
+
+									<div class="label filter-stations">
+										<h4>Остановки и станции</h4>
+										<div class="filter-stations-links">
+											<a href="#0" id="checkall">Выбрать все</a>
+											<a href="#0" id="clearall">Сбросить все</a>
+										</div>
+
+										<div class="filter-stations-list">
+											<label class="select-label">
+												<input type="checkbox" name="Остановка №1">Остановка №1
+											</label>
+
+											<label class="select-label">
+												<input type="checkbox" name="Остановка №2">Остановка №2
+											</label>
+
+											<label class="select-label">
+												<input type="checkbox" name="Остановка №3">Остановка №3
+											</label>
+
+											<label class="select-label">
+												<input type="checkbox" name="Остановка №4">Остановка №4
+											</label>
+										</div>
+									</div>
+
+									<div class="label filter-vokzals">
+										<h4>Вокзалы</h4>
+										<ul>
+											<li><a href="#0">Вокзалы Москвы</a></li>
+											<li><a href="#0">Вокзалы Санкт-Петербурга</a></li>
+											<li><a href="#0">Екатеринбурга</a></li>
+											<li><a href="#0">Вокзалы Москвы</a></li>
+											<li><a href="#0">Вокзалы Санкт-Петербурга</a></li>
+											<li><a href="#0">Екатеринбурга</a></li>
+										</ul>
+									</div>
+								</form>
 
 							</aside>
 						</div>
@@ -275,13 +357,13 @@
 										<div class="stations">
 											<div class="station-departure station">
 												<div class="time">06:45</div>
-												<div class="station-name">г. Симферополь (ст. Суховская)</div>
+												<div class="station-name">Усть-Каменогорск (ст. Суховская)</div>
 												<div class="station-type">Тип станции: Станция</div>
 											</div>
 
 											<div class="station-arrival station">
 												<div class="time">13:10</div>
-												<div class="station-name">г. Москва (Казанский вокзал)</div>
+												<div class="station-name">Санкт-Петербург (Казанский вокзал)</div>
 												<div class="station-type">Тип станции: Вокзал</div>
 											</div>
 										</div>

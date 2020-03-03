@@ -39,6 +39,308 @@ $(document).ready(function(){
         navText: ["",""],
     });
 
+    /** RANGES START*/
+
+    var initialStartMinute = 0,
+        initialEndMinute = 10080,
+        step = 60;
+
+    var convertToHour = function(value){
+        return Math.floor(value / 60);
+    };
+    var convertToMinute = function(value,hour){
+        return value - hour * 60;
+    };
+    var formatHoursAndMinutes = function(hours,minutes){
+        if(hours.toString().length == 1) hours = '0' + hours;
+        if(minutes.toString().length == 1) minutes = '0' + minutes;
+        return hours+':'+minutes;
+    };
+
+    var days = [
+        'вс', //Sunday starts at 0
+        'пн',
+        'вт',
+        'ср',
+        'чт',
+        'пт',
+        'сб',
+        'вс',
+        'пн',
+        'вт',
+        'ср',
+        'чт',
+        'пт',
+        'сб'
+    ];
+
+
+    //DEPARTURE RANGE
+    departureMinDate = $('#range-departure').data('date');
+
+    departureMinDate = new Date(departureMinDate);
+    departureMinDay = departureMinDate.getDay();
+    $('#day-departure-min').text(days[departureMinDay]);
+
+    var departureMaxDate = new Date();
+    departureMaxDate.setDate(departureMinDate.getDate() + 7);
+    departureMaxDay = departureMaxDate.getDay();
+
+    var convertValuesToTime = function(values,handle){
+        var hours = 0,
+            minutes = 0;
+
+        if(handle === 0){
+            hours = convertToHour(values[0]);
+            minutes = convertToMinute(values[0],hours);
+
+            $('#day-departure-min').text(days[departureMinDay]);
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-departure-min').text(days[departureMinDay + 1] );
+            }
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-departure-min').text(days[departureMinDay + 2] );
+            }
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-departure-min').text(days[departureMinDay + 3] );
+            }
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-departure-min').text(days[departureMinDay + 4] );
+            }
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-departure-min').text(days[departureMinDay + 5] );
+            }
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-departure-min').text(days[departureMinDay + 6] );
+            }
+
+            departureMin.innerHTML = formatHoursAndMinutes(hours,minutes);
+        } else {
+            hours = convertToHour(values[1]);
+            minutes = convertToMinute(values[1],hours);
+            $('#day-departure-max').text(days[departureMaxDay]);
+
+
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-departure-max').text(days[departureMaxDay - 5] );
+            }
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-departure-max').text(days[departureMaxDay - 4] );
+            }
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-departure-max').text(days[departureMaxDay - 3] );
+            }
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-departure-max').text(days[departureMaxDay - 2] );
+            }
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-departure-max').text(days[departureMaxDay - 1] );
+            }
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-departure-max').text(days[departureMaxDay] );
+            }
+
+            departureMax.innerHTML = formatHoursAndMinutes(hours,minutes);
+        }
+    };
+
+    if($('#range-departure').length) {
+
+        var rangeDeparture = document.getElementById('range-departure');
+
+        var departureMin = document.getElementById('time-departure-min'),
+            departureMax = document.getElementById('time-departure-max');
+
+        noUiSlider.create(rangeDeparture, {
+            start: [initialStartMinute,initialEndMinute],
+            connect: true,
+            step: step,
+            range: {
+                'min':initialStartMinute,
+                'max':initialEndMinute
+            }
+        });
+
+        rangeDeparture.noUiSlider.on('update',function(values,handle){
+            convertValuesToTime(values,handle);
+        });
+    }
+    //END DEPARTURE RANGE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //ARRIVAL RANGE
+    arrivalMinDate = $('#range-arrival').data('date');
+
+    arrivalMinDate = new Date(arrivalMinDate);
+    arrivalMinDay = arrivalMinDate.getDay();
+    $('#day-arrival-min').text(days[arrivalMinDay]);
+
+    var arrivalMaxDate = new Date();
+    arrivalMaxDate.setDate(arrivalMinDate.getDate() + 7);
+    arrivalMaxDay = arrivalMaxDate.getDay();
+
+    var convertValuesToTimeForARRIVAL = function(values,handle){
+        var hours = 0,
+            minutes = 0;
+
+        if(handle === 0){
+            hours = convertToHour(values[0]);
+            minutes = convertToMinute(values[0],hours);
+
+            $('#day-arrival-min').text(days[arrivalMinDay]);
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-arrival-min').text(days[arrivalMinDay + 1] );
+            }
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-arrival-min').text(days[arrivalMinDay + 2] );
+            }
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-arrival-min').text(days[arrivalMinDay + 3] );
+            }
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-arrival-min').text(days[arrivalMinDay + 4] );
+            }
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-arrival-min').text(days[arrivalMinDay + 5] );
+            }
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-arrival-min').text(days[arrivalMinDay + 6] );
+            }
+
+            arrivalMin.innerHTML = formatHoursAndMinutes(hours,minutes);
+        } else {
+            hours = convertToHour(values[1]);
+            minutes = convertToMinute(values[1],hours);
+            $('#day-arrival-max').text(days[arrivalMaxDay]);
+
+
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-arrival-max').text(days[arrivalMaxDay - 5] );
+            }
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-arrival-max').text(days[arrivalMaxDay - 4] );
+            }
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-arrival-max').text(days[arrivalMaxDay - 3] );
+            }
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-arrival-max').text(days[arrivalMaxDay - 2] );
+            }
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-arrival-max').text(days[arrivalMaxDay - 1] );
+            }
+
+            if(hours > 24) {
+                hours = hours - 24;
+                $('#day-arrival-max').text(days[arrivalMaxDay] );
+            }
+
+            arrivalMax.innerHTML = formatHoursAndMinutes(hours,minutes);
+        }
+    };
+
+    if($('#range-arrival').length) {
+
+        var rangeArrival = document.getElementById('range-arrival');
+
+        var arrivalMin = document.getElementById('time-arrival-min'),
+            arrivalMax = document.getElementById('time-arrival-max');
+
+        noUiSlider.create(rangeArrival, {
+            start: [initialStartMinute,initialEndMinute],
+            connect: true,
+            step: step,
+            range: {
+                'min':initialStartMinute,
+                'max':initialEndMinute
+            }
+        });
+
+        rangeArrival.noUiSlider.on('update',function(values,handle){
+            convertValuesToTimeForARRIVAL(values,handle);
+        });
+    }
+    //END ARRIVAL RANGE
+    /** RANGES END */
+
+    $('#checkall').on('click', function(e){
+        e.preventDefault();
+
+            $('.filter-stations-list label').each(function(){
+                $(this).find('.jq-checkbox').addClass('checked');
+                $(this).find('input').prop('checked', true);
+            })
+    });
+
+    $('#clearall').on('click', function(e){
+        e.preventDefault();
+
+        $('.filter-stations-list label').each(function(){
+            $(this).find('.jq-checkbox').removeClass('checked');
+            $(this).find('input').prop('checked', false);
+        })
+    });
+
+
+
     $('.preloader').fadeOut();
 
     /** FORMS START */
