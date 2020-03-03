@@ -18,6 +18,25 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .route-search-filter
+    width: 100%
+    &:before
+      left: calc(0px - (50vw - 470px))
+      width: calc(50vw - 470px)
+
+  .route-result-items
+    .result-item
+      &:after
+        right: calc(0px - (50vw - 470px))
+        width: calc(50vw - 470px)
+
+  .res-route-slider
+    margin-right: 50px
+    width: calc(100% - 100px)
+
+  .date-slide
+    font-size: 12px
+
   .route-results-topline
     flex-wrap: wrap
     .section-title
@@ -68,7 +87,57 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .res-route-slider
+    margin-bottom: 25px
+
+  .route-result-items
+    .result-item
+      padding: 20px 30px 20px 10px
+      border-radius: 15px
+      &:after
+        display: none
+
+  .route-search-filter
+    margin-bottom: 25px
+
+  .show-filters
+    display: block
+    position: relative
+    cursor: pointer
+    padding-top: 15px
+    padding-bottom: 15px
+    &:after
+      content: ''
+      position: absolute
+      width: 15px
+      height: 9px
+      background-image: url('../img/icons/select-arrow.svg')
+      background-position: center center
+      background-repeat: no-repeat
+      background-size: cover
+      right: 0
+      top: calc(50% - 4.5px)
+    &.active
+      &:after
+        transform: rotate(180deg)
+
+  .route-search-filter
+    padding: 0 40px
+    border-radius: 25px
+    &:before
+      display: none
+
+  .route-search-filter-form
+    padding-top: 20px
+    padding-bottom: 40px
+    display: none
+
+  .ranges
+    margin-left: 10px
+    margin-right: 10px
+
   .route-results-topline
+    padding: 40px 0
     .res-route
       margin-right: 30px
 
@@ -139,6 +208,22 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .route-result-items
+    .result-item
+      flex-wrap: wrap
+      &-stations
+        width: 100%
+        margin-bottom: 25px
+      &-duration
+        height: 120px
+        width: 50%
+        text-align: left
+        padding-left: 12px
+      &-cost
+        width: 50%
+      &-link
+        margin-right: 0
 
   .route-results-topline
     padding: 40px 0
@@ -212,6 +297,50 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .res-route-slider-mobile
+    width: 200px
+
+  .route-result-items
+    margin-bottom: -45px
+    .result-item
+      width: calc(100% + 20px)
+      position: relative
+      left: -10px
+      border-radius: 0
+      &-stations
+        margin-bottom: 30px
+        .station
+          padding-left: 65px
+        .station-departure
+          &:before
+            left: 65px
+          &:after
+            left: 66px
+        .station-arrival
+          &:before
+            left: 65px
+        .time
+          left: 0
+        .station-name
+          font-size: 13px
+          margin-bottom: 6px
+        .station-type
+          font-size: 11px
+      &-duration
+        font-size: 12px
+        height: 110px
+        margin-top: 4px
+      &-cost
+        .cost
+          font-size: 16px
+      &-link
+        width: 50px
+        height: 28px
+        .svg
+          width: 20px
+
+
 
   .route-results-topline
     font-size: 14px

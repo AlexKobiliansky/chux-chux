@@ -343,6 +343,29 @@ $(document).ready(function(){
 
     $('.preloader').fadeOut();
 
+
+    $('.show-filters').click(function(){
+        $(this).toggleClass('active');
+        $('.route-search-filter-form').slideToggle();
+
+        $(this).text(function(i, text){
+            return text === "Развернуть фильтры" ? "Свернуть фильтры" : "Развернуть фильтры";
+        })
+    });
+
+    var resRouteSliderMobile = new Swiper ('.res-route-slider-mobile', {
+        // Optional parameters
+        direction: 'vertical',
+        // loop: true,
+        slidesPerView: 3,
+        spaceBetween: 10,
+        initialSlide: '1',
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
     /** FORMS START */
 
     $.validate({

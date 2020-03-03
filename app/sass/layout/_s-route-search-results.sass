@@ -54,6 +54,7 @@
     border-color: $accent-red
 
 
+
 .date-slide
   line-height: 1
   color: #fff
@@ -63,6 +64,7 @@
   text-align: center
   border: 2px solid rgba(#000, .7)
   border-radius: 40px
+  white-space: nowrap
   &:hover
     border-color: $accent-red
 
@@ -276,4 +278,51 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle
 .noUi-target
   border: none
 
+.show-filters
+  display: none
+
+.res-route-slider-mobile
+  position: relative
+  height: 140px
+  margin-top: 50px
+  margin-bottom: 75px
+  width: 400px
+  margin-left: auto
+  margin-right: auto
+  .swiper-slide
+    height: auto!important
+    &:first-child
+      margin-top: 10px
+    &:last-child
+      margin-bottom: 0
+  .swiper-wrapper
+    height: 135px
+    //padding-top: 10px
+
+.swiper-button-prev, .swiper-button-next
+  width: 38px
+  height: 38px
+  border: 2px solid #ff3000
+  background-color: rgba(0,0,0,.7)
+  border-radius: 50%
+  background-size: 15px 9px
+  background-position: center center
+  background-repeat: no-repeat
+  background-image: url('../img/icons/short-arrow-white.svg')
+  +mt(.3s)
+  right: auto
+  left: calc(50% - 19px)
+  outline: none!important
+
+
+.swiper-button-prev
+  transform: rotate(180deg)
+  top: -25px
+
+.swiper-button-next
+  bottom: -50px
+  top: auto
+
+.mobile-slider-wrap
+  position: relative
 

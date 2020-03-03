@@ -215,11 +215,8 @@
 				<div class="route-results-topline">
 					<h2 class="section-title">Результаты поиска</h2>
 					<div class="res-route">
-						<div class="from">Санкт-Петербург</div>
-						<div class="to">Усть-Каменогорск</div>
-
-<!--						<div class="from">Симферополь</div>-->
-<!--						<div class="to">Москва</div>-->
+						<div class="from">Симферополь</div>
+						<div class="to">Москва</div>
 					</div>
 					<div class="res-num">Найдено <span>134</span> рейса</div>
 					<div class="res-cost">от 1400 &#8381;</div>
@@ -227,9 +224,11 @@
 
 				<div class="route-results-wrap">
 					<div class="row">
-						<div class="col-xl-3">
+						<div class="col-lg-4 col-xl-3">
+
 							<aside class="route-search-filter">
-								<form>
+								<div class="show-filters">Развернуть фильтры</div>
+								<form class="route-search-filter-form">
 									<label>
 										<select name="cruise-time" class="form-select">
 											<option value="Самые ранние">Самые ранние</option>
@@ -314,8 +313,8 @@
 
 							</aside>
 						</div>
-						<div class="col-xl-8 offset-xl-1">
-							<div class="res-dates-slider res-route-slider owl-carousel">
+						<div class="col-lg-8 col-xl-8 offset-xl-1">
+							<div class="res-dates-slider res-route-slider owl-carousel d-none d-md-block">
 								<!-- slide start -->
 								<a href="#0" class="date-slide">Четверг, 20 марта</a>
 								<!-- slide end -->
@@ -329,7 +328,7 @@
 								<!-- slide end -->
 
 								<!-- slide start -->
-								<a href="#0" class="date-slide">Воскресенье, 23 марта</a>
+								<a href="#0" class="date-slide">Воскресенье, 23 сентября</a>
 								<!-- slide end -->
 
 								<!-- slide start -->
@@ -347,6 +346,68 @@
 								<!-- slide start -->
 								<a href="#0" class="date-slide">Четверг, 27 марта</a>
 								<!-- slide end -->
+							</div>
+
+
+							<div class="mobile-slider-wrap d-md-none">
+								<div class="res-route-slider-mobile swiper-container">
+									<!-- Additional required wrapper -->
+									<div class="swiper-wrapper">
+										<!-- slide start -->
+										<div class="swiper-slide">
+											<a href="#0" class="date-slide">Четверг, 20 марта</a>
+										</div>
+										<!-- slide end -->
+
+										<!-- slide start -->
+										<div class="swiper-slide">
+											<a href="#0" class="date-slide">Пятница, 21 марта</a>
+										</div>
+										<!-- slide end -->
+
+										<!-- slide start -->
+										<div class="swiper-slide">
+											<a href="#0" class="date-slide">Суббота, 22 марта</a>
+										</div>
+										<!-- slide end -->
+
+										<!-- slide start -->
+										<div class="swiper-slide">
+											<a href="#0" class="date-slide">Воскресенье, 23 марта</a>
+										</div>
+										<!-- slide end -->
+
+										<!-- slide start -->
+										<div class="swiper-slide">
+											<a href="#0" class="date-slide">Понедельник, 24 марта</a>
+										</div>
+										<!-- slide end -->
+
+										<!-- slide start -->
+										<div class="swiper-slide">
+											<a href="#0" class="date-slide">Вторник, 25 марта</a>
+										</div>
+										<!-- slide end -->
+
+										<!-- slide start -->
+										<div class="swiper-slide">
+											<a href="#0" class="date-slide">Среда, 26 марта</a>
+										</div>
+										<!-- slide end -->
+
+										<!-- slide start -->
+										<div class="swiper-slide">
+											<a href="#0" class="date-slide">Четверг, 27 марта</a>
+										</div>
+										<!-- slide end -->
+									</div>
+
+
+								</div>
+
+								<!-- If we need navigation buttons -->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
 							</div>
 
 							<div class="route-result-items">
@@ -531,6 +592,141 @@
 			</div>
 		</section>
 		<!-- ======= SECTION ROUTE-SEARCH-RESULTS END ======= -->
+
+		<!-- SECTION POPULARS START -->
+		<section class="s-populars">
+			<div class="container">
+				<h2 class="section-title">Популярные международные маршруты</h2>
+				<div class="pops-wrap">
+					<!-- pop-item -->
+					<div class="pop-item">
+						<div class="pop-item-top">
+							<div class="pop-item-from">Германия (Мюнхен)</div>
+							<div class="pop-item-to">Чехия (Прага)</div>
+						</div>
+						<div class="pop-item-img" style="background-image: url('img/pop-img-1.jpg');">
+							<a href="#0" class="btn btn-red">Посмотреть</a>
+						</div>
+						<div class="pop-item-bottom">Количество маршрутов: <span>158</span></div>
+					</div>
+					<!-- /pop-item -->
+
+					<!-- pop-item -->
+					<div class="pop-item">
+						<div class="pop-item-top">
+							<div class="pop-item-from">Санкт-Петербург (Россия)</div>
+							<div class="pop-item-to">Чехия (Прага)</div>
+						</div>
+						<div class="pop-item-img" style="background-image: url('img/pop-img-2.jpg');">
+							<a href="#0" class="btn btn-red">Посмотреть</a>
+						</div>
+						<div class="pop-item-bottom">Количество маршрутов: <span>1582</span></div>
+					</div>
+					<!-- /pop-item -->
+
+					<!-- pop-item -->
+					<div class="pop-item">
+						<div class="pop-item-top">
+							<div class="pop-item-from">Усть-Каменогорск (Казахстан)</div>
+							<div class="pop-item-to">Чехия (Прага)</div>
+						</div>
+						<div class="pop-item-img" style="background-image: url('img/pop-img-3.jpg');">
+							<a href="#0" class="btn btn-red">Посмотреть</a>
+						</div>
+						<div class="pop-item-bottom">Количество маршрутов: <span>1</span></div>
+					</div>
+					<!-- /pop-item -->
+
+					<!-- pop-item -->
+					<div class="pop-item">
+						<div class="pop-item-top">
+							<div class="pop-item-from">Киев (Украина)</div>
+							<div class="pop-item-to">Лондон (Англия)</div>
+						</div>
+						<div class="pop-item-img" style="background-image: url('img/pop-img-4.jpg');">
+							<a href="#0" class="btn btn-red">Посмотреть</a>
+						</div>
+						<div class="pop-item-bottom">Количество маршрутов: <span>158</span></div>
+					</div>
+					<!-- /pop-item -->
+
+					<!-- pop-item -->
+					<div class="pop-item">
+						<div class="pop-item-top">
+							<div class="pop-item-from">Германия (Мюнхен)</div>
+							<div class="pop-item-to">Чехия (Прага)</div>
+						</div>
+						<div class="pop-item-img" style="background-image: url('img/pop-img-1.jpg');">
+							<a href="#0" class="btn btn-red">Посмотреть</a>
+						</div>
+						<div class="pop-item-bottom">Количество маршрутов: <span>158</span></div>
+					</div>
+					<!-- /pop-item -->
+
+					<!-- pop-item -->
+					<div class="pop-item">
+						<div class="pop-item-top">
+							<div class="pop-item-from">Санкт-Петербург (Россия)</div>
+							<div class="pop-item-to">Чехия (Прага)</div>
+						</div>
+						<div class="pop-item-img" style="background-image: url('img/pop-img-2.jpg');">
+							<a href="#0" class="btn btn-red">Посмотреть</a>
+						</div>
+						<div class="pop-item-bottom">Количество маршрутов: <span>1582</span></div>
+					</div>
+					<!-- /pop-item -->
+
+					<!-- pop-item -->
+					<div class="pop-item">
+						<div class="pop-item-top">
+							<div class="pop-item-from">Усть-Каменогорск (Казахстан)</div>
+							<div class="pop-item-to">Чехия (Прага)</div>
+						</div>
+						<div class="pop-item-img" style="background-image: url('img/pop-img-3.jpg');">
+							<a href="#0" class="btn btn-red">Посмотреть</a>
+						</div>
+						<div class="pop-item-bottom">Количество маршрутов: <span>1</span></div>
+					</div>
+					<!-- /pop-item -->
+
+					<!-- pop-item -->
+					<div class="pop-item">
+						<div class="pop-item-top">
+							<div class="pop-item-from">Киев (Украина)</div>
+							<div class="pop-item-to">Лондон (Англия)</div>
+						</div>
+						<div class="pop-item-img" style="background-image: url('img/pop-img-4.jpg');">
+							<a href="#0" class="btn btn-red">Посмотреть</a>
+						</div>
+						<div class="pop-item-bottom">Количество маршрутов: <span>158</span></div>
+					</div>
+					<!-- /pop-item -->
+				</div>
+			</div>
+		</section>
+		<!-- SECTION POPULARS END -->
+
+		<!-- SECTION TEXT START -->
+		<section class="s-text">
+			<div class="container">
+				<div class="texts-wrap">
+					<div class="text-item">
+						<h2 class="section-title">Заголовок SEO текста</h2>
+						<p>Путешествуйте по Европе и России с минимальным вредом для окружающей среды: выбирайте комфортабельные и экологичные автобусы FlixBus. Мы предлагаем более 400 000 маршрутов в 2 500 городов и 29 странах. Откройте для себя новые направления вместе с нами.</p>
+
+						<p>Навестить друзей и родственников, посмотреть новые города, отправиться в горы или поехать на море — что бы вы ни планировали, мы довезем вас до нужного места с комфортом и вовремя. Купить билеты на автобусы FlixBus можно на сайте или в бесплатном приложении. Мы построили простую и интуитивно понятную систему бронирования, благодаря чему вы можете оплачивать заказы онлайн всего в пару кликов. Вам останется решить, куда поехать. В нашей сети маршрутов — Россия, Германия, Австрия, Нидерланды, Испания и Италия, а также Дания, Швеция, Венгрия, Чехия, Хорватия и другие страны. </p>
+					</div>
+
+					<div class="text-item">
+						<h2 class="section-title">Заголовок SEO текста</h2>
+						<p>Путешествуйте по Европе и России с минимальным вредом для окружающей среды: выбирайте комфортабельные и экологичные автобусы FlixBus. Мы предлагаем более 400 000 маршрутов в 2 500 городов и 29 странах. Откройте для себя новые направления вместе с нами.</p>
+
+						<p>Навестить друзей и родственников, посмотреть новые города, отправиться в горы или поехать на море — что бы вы ни планировали, мы довезем вас до нужного места с комфортом и вовремя. Купить билеты на автобусы FlixBus можно на сайте или в бесплатном приложении. Мы построили простую и интуитивно понятную систему бронирования, благодаря чему вы можете оплачивать заказы онлайн всего в пару кликов. Вам останется решить, куда поехать. В нашей сети маршрутов — Россия, Германия, Австрия, Нидерланды, Испания и Италия, а также Дания, Швеция, Венгрия, Чехия, Хорватия и другие страны. </p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- SECTION TEXT END -->
 
 		<!-- ======= FOOTER START ======= -->
 		<footer class="main-foot">
