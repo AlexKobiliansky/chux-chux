@@ -208,3 +208,32 @@ ul
 .owl-item.active.center
   .date-slide
     border-color: $accent-red
+
+.themes-switcher
+  z-index: 2
+  a
+    display: block
+    text-align: center
+    width: 42px
+    height: 42px
+    padding-top: 8px
+    font-size: 15px
+    font-weight: 700
+    border-radius: 5px
+    &.active
+      border-color: $accent-red!important
+
+.dark-theme-switcher
+  color: #fff
+  background-color: rgba(#000, .7)
+  border: 2px solid rgba(#000, .7)
+  margin-bottom: 9px
+
+.light-theme-switcher
+  background-color: #fff
+  color: #67287e
+  border: 2px solid #fff
+  &:hover, &:active, &:focus
+    color: $accent-violet
+
+

@@ -87,6 +87,18 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .s-searchtabs
+    .themes-switcher
+      a
+        width: 32px
+        height: 32px
+        margin-left: auto
+        font-size: 12px
+        padding-top: 6px
+
+  .socials
+    height: calc(100% - 73px)
+
   .res-route-slider
     margin-bottom: 25px
 
@@ -209,6 +221,24 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .is-home
+    .socials
+      display: inline-block
+      .soc-item
+        margin: 0 5px
+        .svg
+          width: 25px
+
+  .s-searchtabs
+    .themes-switcher
+      float: right
+      a
+        display: inline-block
+        width: 27px
+        height: 27px
+        font-size: 10px
+        padding-top: 5px
+
   .route-result-items
     .result-item
       flex-wrap: wrap
@@ -292,6 +322,7 @@
     padding-top: 0
     flex-direction: row
     justify-content: center
+    height: auto
     .soc-item
       margin: 0 10px
 
